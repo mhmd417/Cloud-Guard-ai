@@ -1,0 +1,21 @@
+# Ignore everything except what the backend container strictly needs
+.git
+.gitignore
+.env
+.env.*
+.pytest_cache
+.ipynb_checkpoints
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+data/
+notebooks/
+web/
+docs/
+ml/src/
+ml/notebooks/
+ml/tests/
+backend/tests/
+README.md
+pyproject.toml
