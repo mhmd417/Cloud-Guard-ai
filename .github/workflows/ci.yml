@@ -26,29 +26,19 @@ jobs:
           pip install -r backend/requirements.txt pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run backend pytest
-        working-directory: backend
+      - name: Run pytest for backend and ml
         env:
           PYTHONPATH: "."
           API_KEY: "ci-test-api-key"
           ALLOWED_ORIGIN: "http://localhost:5173"
-        run: python -m pytest tests -v
-
-      - name: Run ML pytest
-        working-directory: ml
-        env:
-          PYTHONPATH: "."
-        run: |
-          if [ -d "tests" ]; then
-            python -m pytest tests -v
-          fi
+        run: python -m pytest backend/tests ml/tests -v
 
       - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: "web/package-lock.json"
+          cache-dependencny-path: "web/package-lock.json"
 
       - name: Install web dependencies and build frontend
         working-directory: web
