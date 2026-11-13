@@ -1,4 +1,4 @@
-# CloudGuard AI — Predictive Maintenance Telemetry Classifier
+# CloudGuard AI ” Predictive Maintenance Telemetry Classifier"
 
 [![CloudGuard AI CI](https://github.com/mhmd417/Cloud-Guard-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/mhmd417/Cloud-Guard-ai/actions/workflows/ci.yml)
 
@@ -23,9 +23,9 @@ React + Vite + TypeScript (Port 5173)  ---->  FastAPI Inference Service in Docke
 
 * **Leakage-Free ML Pipeline (`ml/`):** Validates the UCI AI4I 2020 schema, removes target-leaking identifier and failure-mode columns (`UDI`, tProduct ID`, `TWF`, `HDF`, `PWF`, `OSF`, `RNF`), performs stratified 80/20 train/test splits, and calibrates a decision threshold (`0.45`) optimized for failure recall and PR-AUC.
 * **Production-Style FastAPI Backend (`backend/`):** Exposes `GET /health`, `GET /model-info`, and `POST /predict` with strict Pydantic range constraints, `X-API-Key` authentication, structured error envelopes (`HTTP 401`, `HTTP 422`), and automated `pytest` test suites.
-* **Containerized Runtime (`backend/Dockerfile`):** Packages the inference API and serialized model artifact (`v1.0.0`) into a Docker container configurable via `PORTf� `API_KEY`, `ALLOWED_ORIGIN`, and `LOG_LEVEL`.
-* **Interactive Telemetry Dashboard (`web/`):** Built with React, TypeScript, and Vite—featuring instant sample presets, client-side range validation, probability visualization, and diagnostic controls for testing `HTTP 401` and `HTTP 422` error states.
-* **Automated CI Pipeline (`.github/workflows/ci.yml`)ƪ" Runs `pytest` for backend and ML plus `npm ci` & `npm run build` on every push and pull request.
+* **Containerized Runtime (`backend/Dockerfile`):** Packages the inference API and serialized model artifact (`v1.0.0`) into a Docker container configurable via `PORTf¬ `API_KEY`, `ALLOWED_ORIGIN`, and `LOG_LEVEL`.
+* **Interactive Telemetry Dashboard (`web/`):** Built with React, TypeScript, and Viteâ€”featuring instant sample presets, client-side range validation, probability visualization, and diagnostic controls for testing `HTTP 401` and `HTTP 422` error states.
+* **Automated CI Pipeline (`.github/workflows/ci.yml`)Æª" Runs `pytest` for backend and ML plus `npm ci` & `npm run build` on every push and pull request.
 
 ---
 
@@ -33,23 +33,23 @@ React + Vite + TypeScript (Port 5173)  ---->  FastAPI Inference Service in Docke
 
 ```text
 cloudguard-ai/
-⦜ .github/workflows/
-   └— ci.yml              # GitHub Actions CI workflow (pytest + Vite build)
-⒜ backend/
-   ☜ app/                 # FastAPI application, schemas, auth, and model loader
-   ├ tests/               # Pytest endpoint, auth, and validation suites
-   ├ Dockerfile            # Container build specification
-   ☔ requirements.txt      # Backend Python dependencies
-⒜ data/
-   ☔ README.md            # Dataset acquisition & schema documentation
-├ docs/
-   ├ DEPLOYMENT-TEST..md -> DEPLOYMENT-NOTES.md  # Docker & cloud deployment guide
-   ☔ MODEL_CARD.md        # Model metrics, limitations, and ethical scope
-├ ml/                     # Data preprocessing, training, evaluation, and unit tests
-├ web/
-   ├ src/                 # React + TypeScript components, API client, and validation
-   └— package.json          # Frontend dependencies and Vite scripts
-b�� README.md                # Project overview and quick-start guide
+â¦œ .github/workflows/
+   â””â€” ci.yml              # GitHub Actions CI workflow (pytest + Vite build)
+â’œ backend/
+   â˜œ app/                 # FastAPI application, schemas, auth, and model loader
+   â”œ tests/               # Pytest endpoint, auth, and validation suites
+   â”œ Dockerfile            # Container build specification
+   â˜” requirements.txt      # Backend Python dependencies
+â’œ data/
+   â˜” README.md            # Dataset acquisition & schema documentation
+â”œ docs/
+   â”œ DEPLOYMENT-TEST..md -> DEPLOYMENT-NOTES.md  # Docker & cloud deployment guide
+   â˜” MODEL_CARD.md        # Model metrics, limitations, and ethical scope
+â”œ ml/                     # Data preprocessing, training, evaluation, and unit tests
+â”œ web/
+   â”œ src/                 # React + TypeScript components, API client, and validation
+   â””â€” package.json          # Frontend dependencies and Vite scripts
+b”” README.md                # Project overview and quick-start guide
 ```
 
 ---
@@ -131,6 +131,6 @@ Open **`http://localhost:5173`** in your browser.
 ## Author
 
 **Mohamed Reda Farag**
-  AI & Computer Science Student — Sphinx University
+  AI & Computer Science Student â€” Sphinx University
   Email: `mhmdrdafraj100@gmail.com`
   Gemini: https://github.com/mhmd417
